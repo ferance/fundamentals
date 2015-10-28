@@ -1,8 +1,34 @@
 #!/usr/bin/env python3
 import skilstak.colors as c
+import time
 
-try:
+def plain():
+    """clears screen and prints Hello,World!"""
+    print(c.clear + c.rc() + "Hello," + c.rc() + "World!")
+
+def multi():
+    """prints Hello,World! in multiple colors"""
     while True:
-        print(c.clear + c.rc() + "Hello," + c.rc() + "World!")
-except KeyboardInterrupt:
-    exit()
+        print(c.clear + c.multi("Hello,World!"))
+        time.sleep(0.5)
+
+def color():
+    """fill screen with randomly colored Hello,World!"""
+    print(c.clear)
+    while True:
+        print(c.rc() + "Hello," + c.rc() + "World!" + c.reset, end=" ")
+
+
+def hello(kind='plain'):
+    """runs hello world"""
+    try:
+        while True:
+            print(c.clear + c.rc() + "Hello," + c.rc() + "World!")
+    except KeyboardInterrupt:
+        exit()
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) == 1:
+        hello()
+    else:
+        hello(sys.argv[1])
