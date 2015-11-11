@@ -2,33 +2,32 @@
 import skilstak.colors as c
 import time
 
-def plain():
+def print_plain():
     """clears screen and prints Hello,World!"""
     print(c.clear + c.rc() + "Hello," + c.rc() + "World!")
 
-def multi():
+def print_multi():
+    print(c.clear + c.rc() + "Hello," + c.rc() + "World!")
     """prints Hello,World! in multiple colors"""
     while True:
         print(c.clear + c.multi("Hello,World!"))
         time.sleep(0.5)
 
-def color():
+def print_color():
     """fill screen with randomly colored Hello,World!"""
     print(c.clear)
     while True:
         print(c.rc() + "Hello," + c.rc() + "World!" + c.reset, end=" ")
 
 
-def hello(kind='plain'):
+def parse_args():
     """runs hello world"""
-    try:
-        while True:
-            print(c.clear + c.rc() + "Hello," + c.rc() + "World!")
-    except KeyboardInterrupt:
-        exit()
-if __name__ == '__main__':
-    import sys
-    if len(sys.argv) == 1:
-        hello()
-    else:
-        hello(sys.argv[1])
+    p = {
+    "who": "world",
+    "option": ""
+    }
+    if len(sys.argv) > 2:
+        p['option'] = sys.argv[1]
+        p['who'] = sys.argv[2]
+    elif len(sys.argv) == 2:
+
