@@ -1,11 +1,25 @@
 #!/usr/bin/env python3
 
+import skilstak.colors as c
+import time as t
+
 "My super duper awesome hello world program"
 
 def print_plain(message="hello world"):
     """prints < message > in plain"""
     print(message)
 
+def print_multi(message):
+    while True:
+        """prints < message > in multi"""
+        print(c.multi(message))
+        t.sleep(.5)
+
+def print_color(message):
+    """prints < message > in color"""
+    print(c.o + message)
+
+
 
 if __name__ == "__main__":
-    print_plain("Mr.TommyPants")
+    print_color("Mr.TommyPants")
