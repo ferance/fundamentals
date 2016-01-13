@@ -1,5 +1,19 @@
 #!/usr/bin/env node
 
 "use strict";
-console.log("Hello World");
-console.log("Mr.TommyPants");
+
+var c = require('skilstak-colors');
+
+function printMulti() {
+  console.log(c.multi("Hello World"));
+  console.log(c.multi("Mr.TommyPants likes"));
+}
+
+var printColors = function () {
+  console.log(c.r + "Red,");
+  console.log(c.y + "Yellow,");
+  console.log(c.b + "and Blue");
+}
+
+printMulti();
+printColors();
