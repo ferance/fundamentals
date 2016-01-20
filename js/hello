@@ -4,16 +4,22 @@
 
 var c = require('skilstak-colors');
 
-function printMulti() {
-  console.log(c.multi("Hello World"));
-  console.log(c.multi("Mr.TommyPants likes"));
+function printMulti(message) {
+  console.log(c.multi(message));
 }
 
-var printColors = function () {
-  console.log(c.r + "Red,");
-  console.log(c.y + "Yellow,");
-  console.log(c.b + "and Blue");
+var printColors = function (message) {
+  console.log(c.r + message + c.x);
+  console.log(c.y + message + c.x);
+  console.log(c.b + message + c.x);
 }
 
-printMulti();
-printColors();
+var printAwesome = function (message) {
+  console.log(c.o + message);
+}
+
+printMulti("Mr.TommyPants likes pie!");
+while (true) {
+printColors("May I hav colrs plz?????");
+}
+printAwesome("SenseiFuzzyBuns, Nickipoo, Sully, Bo, WyWy, MalPal123, and JohnBohn21 are awesome!!!");
