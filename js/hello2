@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+"use strict"; 
+
+var c = require('skilstak-colors');
+
+var printOrange = function (message) {
+  while (true) {
+  console.log(c.o + message + c.x);
+}}
+
+printOrange("Orange!!!");

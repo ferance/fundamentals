@@ -2,24 +2,23 @@
 
 "use strict";
 
-var c = require('skilstak-colors');
+var c = require('skilstak-colors')
 
 function printMulti(message) {
   console.log(c.multi(message));
 }
 
 var printColors = function (message) {
+  while (true) {
   console.log(c.r + message + c.x);
   console.log(c.y + message + c.x);
   console.log(c.b + message + c.x);
-}
+}}
 
 var printAwesome = function (message) {
   console.log(c.o + message);
 }
 
 printMulti("Mr.TommyPants likes pie!");
-while (true) {
 printColors("May I hav colrs plz?????");
-}
 printAwesome("SenseiFuzzyBuns, Nickipoo, Sully, Bo, WyWy, MalPal123, and JohnBohn21 are awesome!!!");
