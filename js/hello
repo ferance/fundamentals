@@ -2,7 +2,7 @@
 
 "use strict";
 
-var c = require('skilstak-colors')
+var c = require('skilstak-colors');
 
 function printMulti(name) {
   console.log(c.multi(name));
@@ -19,8 +19,18 @@ var printAwesome = function (name) {
   console.log(c.o + name);
 }
 
-var coolArg = process.argv[2];
+var coolArg = process.argv[2]
+console.log(coolArg);
 
+//Default Variables
+//var name = 'World';
+//var option = '-m';
+
+//var coolArg = process.argv[2];
+
+//if (coolArg[0] === "-") {
+  //option = coolArg;
+//}  
 //printMulti(coolArg);
-printColors(coolArg);
+//printColors(coolArg);
 //printAwesome("SenseiFuzzyBuns, Nickipoo, Sully, Bo, WyWy, MalPal123, and JohnBohn21 are awesome!!!");
